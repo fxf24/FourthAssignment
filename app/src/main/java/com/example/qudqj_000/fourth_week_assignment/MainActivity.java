@@ -8,7 +8,6 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
     Button b1, b2;
-    Intent intent;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,12 +25,10 @@ public class MainActivity extends AppCompatActivity {
     public void OnClick(View v){
         switch (v.getId()){
             case R.id.first_assignment:
-                intent = new Intent(MainActivity.this, MenuActivity.class);
-                startActivity(intent);
+                startActivity(new Intent(MainActivity.this, MenuActivity.class));
                 break;
             case R.id.second_assignment:
-                intent = new Intent(MainActivity.this, CalcActivity.class);
-                startActivity(intent);
+                startActivity(new Intent(MainActivity.this, CalcActivity.class));
                 break;
         }
     }
