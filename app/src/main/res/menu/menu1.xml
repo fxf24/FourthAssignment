@@ -33,9 +33,14 @@
         android:checkableBehavior="single">
         <item
             android:id="@+id/chicken"
-            android:title="치킨" />
+            android:title="치킨"
+            android:checked="true"/>
         <item
             android:id="@+id/spaghetti"
             android:title="스파게티" />
     </group>
+    <item
+        android:id="@+id/next_page"
+        android:title ="다음 페이지"
+    />
 </menu>
