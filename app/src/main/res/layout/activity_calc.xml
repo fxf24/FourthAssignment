@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     >
 
     <TabHost
+        android:id="@+id/tabhost1"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -26,22 +28,134 @@
 
                 <LinearLayout
                     android:id="@+id/tab1"
-                    android:background="#fff521"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:background="#fff521"
                     android:orientation="vertical">
 
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="20dp"
+                        android:background="#ffffff"
+                        android:orientation="vertical"
+                        android:padding="20dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="키와 몸무게를 입력하세요" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="키(cm)"
+                            android:textSize="30dp" />
+
+                        <EditText
+                            android:id="@+id/height"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="체중(kg)"
+                            android:textSize="30dp" />
+
+                        <EditText
+                            android:id="@+id/weight"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                        <Button
+                            android:onClick="onClick"
+                            android:id="@+id/bmiCalc"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#560c0c"
+                            android:text="BMI 계산 결과"
+                            android:textColor="#ffffff" />
+
+                        <TextView
+                            android:id="@+id/result1"
+                            android:textSize="20dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="결과가 없습니다." />
+                    </LinearLayout>
                 </LinearLayout>
 
                 <LinearLayout
                     android:id="@+id/tab2"
-                    android:background="#11a8f4"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:background="#11a8f4"
                     android:orientation="vertical">
 
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="20dp"
+                        android:background="#ffffff"
+                        android:padding="20dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:textSize="20dp"
+                            android:text="평이나 면적을 입력하세요"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                        <EditText
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:id="@+id/m_or_p"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:id="@+id/imageView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:srcCompat="@android:drawable/btn_star_big_on" />
+
+                            <TextView
+                                android:layout_marginTop="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:id="@+id/result2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="계산결과가 없습니다."/>
+                        </LinearLayout>
+
+                        <Button
+                            android:onClick="onClick"
+                            android:id="@+id/p_to_m"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:text="평을 제곱미터로 변환"
+                            android:textColor="#ffffff"
+                            android:background="#151cb4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                        <Button
+                            android:onClick="onClick"
+                            android:id="@+id/m_to_p"
+                            android:layout_marginTop="10dp"
+                            android:text="제곱미터를 평으로 변환"
+                            android:textColor="#ffffff"
+                            android:background="#0a7f0c"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                    </LinearLayout>
                 </LinearLayout>
+
             </FrameLayout>
+
         </LinearLayout>
     </TabHost>
 </LinearLayout>
